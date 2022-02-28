@@ -1,1 +1,41 @@
 //Use Python3 code to scan the picture. Then, compare the scanned images with images in the image database and find similar images.
+//Need todo
+//1. Image Identification  & image search code
+//2.Balance aHash
+//3. Image Binarization
+//4. Compared  Hash
+//5. picture detabase
+
+import  numpy as np
+import random
+import time
+import math
+import cv
+
+
+def aHash(img):
+    # scaling 3*3
+    img = cv.resize(img, (3, 3), interpolation=cv.INTER_CUBIC)
+    gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+ 
+    pixel = 0
+    hash_str = ''
+  
+    for i in range(3):
+        for j in range(3):
+            s = s + gray[i, j]
+
+    avg = pixel / 9    #find avg
+  
+    for i in range(3):   # 0: show hash value of image
+        for j in range(3):
+            if gray[i, j] > avg:
+                hash_str += '1'
+            else:
+                hash_str += '0'
+    return hash_str
+
+
+def dHash(img):
+
+def cmpHash(hash1,hash2):
