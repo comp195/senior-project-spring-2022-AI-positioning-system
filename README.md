@@ -5,9 +5,14 @@ senior-project-spring-2022-AI-positioning-system created by GitHub Classroom
 
 Project describes
 About
-Use Artificial Intelligence algorithms to find images that are similar to scanned images. And extract the text to determine. The use this text and table to locat the picture. 
+Use Artificial Intelligence algorithms to find images that are similar to scanned images. And extract the text to determine. The use this text and table to locat the picture. I'm going to test this with photos from different databases. The Photos1 and photos2 groups are different and it come from different cities and places.
+
+Use Python3 code to scan the picture. Then, compare the scanned images with images in the image database and find similar images.
 
 
+
+Technologies and Software Used
+Python; Pycharm, windows
 
 Project Components
 ![image](https://user-images.githubusercontent.com/72994790/155926459-9816875a-93bd-442a-a118-edb4be6c404b.png)
