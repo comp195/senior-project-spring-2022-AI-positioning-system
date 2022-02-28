@@ -23,3 +23,6 @@ Python; Pycharm, windows
 
 Project Components
 ![image](https://user-images.githubusercontent.com/72994790/155926459-9816875a-93bd-442a-a118-edb4be6c404b.png)
+
+
+[simple-gantt-chart_ms.xlsx](https://github.com/comp195/senior-project-spring-2022-AI-positioning-system/files/8151604/simple-gantt-chart_ms.xlsx)
