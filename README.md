@@ -25,4 +25,5 @@ Project Components
 ![image](https://user-images.githubusercontent.com/72994790/155926459-9816875a-93bd-442a-a118-edb4be6c404b.png)
 
 
+This also in WIKI
 [Simple-gantt-chart_ms .xlsx](https://github.com/comp195/senior-project-spring-2022-AI-positioning-system/files/8189944/Simple-gantt-chart_ms.xlsx)
