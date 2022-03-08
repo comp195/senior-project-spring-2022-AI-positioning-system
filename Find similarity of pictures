@@ -37,5 +37,30 @@ def aHash(img):
 
 
 def dHash(img):
+def cmpHash(hash1,hash2):
+    n=0
+    if len(hash1)!=len(hash2):
+        return -1
+    for i in range(len(hash1)):
+        if hash1[i]!=hash2[i]:
+            n=n+1
+    return n
+    
+img1=cv2.imread(r'a.jpg')
+img2=cv2.imread(r'b.jpg')
+
+hash1= aHash(img1)
+hash2= aHash(img2)
+print(hash1)
+print(hash2)
+n=cmpHash(hash1,hash2)
+print ('Samiliarly：'+ str(n))
+
+hash1= dHash(img1)
+hash2= dHash(img2)
+print(hash1)
+print(hash2)
+n=cmpHash(hash1,hash2)
+print ('Samiliarly：'+ str(n))
 
 def cmpHash(hash1,hash2):
