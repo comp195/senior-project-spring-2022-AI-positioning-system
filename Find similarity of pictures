@@ -63,4 +63,9 @@ print(hash2)
 n=cmpHash(hash1,hash2)
 print ('Samiliarly：'+ str(n))
 
-def cmpHash(hash1,hash2):
+def cmpHash(hash1,hash2hash1= dHash(img1)
+hash2= dHash(img2)
+print(hash1)
+print(hash2)
+n=cmpHash(hash1,hash2)
+print ('Samiliarly：'+ str(n))
