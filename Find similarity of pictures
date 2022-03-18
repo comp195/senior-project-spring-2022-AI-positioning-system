@@ -46,26 +46,3 @@ def cmpHash(hash1,hash2):
             n=n+1
     return n
     
-img1=cv2.imread(r'a.jpg')
-img2=cv2.imread(r'b.jpg')
-
-hash1= aHash(img1)
-hash2= aHash(img2)
-print(hash1)
-print(hash2)
-n=cmpHash(hash1,hash2)
-print ('Samiliarly：'+ str(n))
-
-hash1= dHash(img1)
-hash2= dHash(img2)
-print(hash1)
-print(hash2)
-n=cmpHash(hash1,hash2)
-print ('Samiliarly：'+ str(n))
-
-def cmpHash(hash1,hash2hash1= dHash(img1)
-hash2= dHash(img2)
-print(hash1)
-print(hash2)
-n=cmpHash(hash1,hash2)
-print ('Samiliarly：'+ str(n))
