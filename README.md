@@ -17,6 +17,7 @@ Extract words and numbers from highly similar images. And. Will repeat the numbe
 From maximum to minimum, pick the number that repeats the most, or. Text and use the item. Text to get the location.
 4. Test project:
 At the end of the project, I will test all the deta and code. Then, calculate the correct rate.
+picture_detabase is use my detabase picture to test it. which include group 1 and group2.
 
 
 Technologies and Software Used:                        
