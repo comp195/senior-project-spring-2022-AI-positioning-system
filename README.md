@@ -19,9 +19,7 @@ From maximum to minimum, pick the number that repeats the most, or. Text and use
 At the end of the project, I will test all the deta and code. Then, calculate the correct rate.
 picture_detabase is use my detabase picture to test it. which include group 1 and group2.
 
-Special notes: 3/17
-There is currently a problem with the text in the scanner and the text &number extraction. My code cannot precise, and location the white block for the text. I research about some Scan the picture use Optical Character Recognition (OCR) essay and paper to help me to slive the problem of clarity, but it is not work for now.
-The current progress about find similarity is complete but not test yet. The image database for the first group has been compiled, and there are three similar images. And the first image has an print text.
+Special notes:  3/17 There is currently a problem with the text in the scanner and the text &number extraction. My code cannot precise, and location the white block for the text. I research about some Scan the picture use Optical Character Recognition (OCR) essay and paper to help me to solve the problem of clarity, but it does not work for now. The current progress about finding similarities is complete but not tested yet. The image database for the first group has been compiled, and there are three similar images. And the first image has print text.
 
 
 Technologies and Software Used:                        
@@ -34,5 +32,5 @@ Picture Detabase (this detabase will include 500 pictures and it's include some 
 This also in WIKI
 [Simple-gantt-chart_ms .xlsx](https://github.com/comp195/senior-project-spring-2022-AI-positioning-system/files/8189944/Simple-gantt-chart_ms.xlsx)
 
-Callenges:  (find text & number):  
-Still Learning about Scan the picture use Optical Character Recognition(OCR) problem. Try to use text detection, character segmentation and Character classification to clear the text.
+Callenges: (find text & number):
+Still Learning about scanning the picture using Optical Character Recognition(OCR) problem. Try to use text detection, character segmentation, and Character classification to clear the text.
