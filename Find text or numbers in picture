@@ -32,3 +32,4 @@ for i in range(0,36):
     print('page:',i)
 print('over')
 //use web to print the message
+// tesseract-ocr or baidu-ocr
