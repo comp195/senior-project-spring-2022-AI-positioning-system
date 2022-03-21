@@ -3,9 +3,9 @@ senior-project-spring-2022-AI-positioning-system created by GitHub Classroom
 
 ![image](https://user-images.githubusercontent.com/72994790/155942737-dd6101bf-0149-4948-a8da-c893bec73347.png)
 
-Project describes                                                                                          
+Project Describes                                                                                          
 About
-Use Artificial Intelligence algorithms to find images that are similar to scanned images. And extract the text to determine. The use this text and table to locat the picture. I'm going to test this with photos from different databases. The Photos1 and photos2 groups are different and it come from different cities and places.                  
+Use Artificial Intelligence algorithms to find images that are similar to scanned images. And extract the text to determine. The use this text and table to locat the picture. I'm going to test this with photos from different databases. The Photos1 and photos2 groups are different and it come from different cities and places.        
 This project can help you find the location of the photo you want. And there's a certain probability of finding its exact location. There are plenty of similar photos to be found.
 
 Include 4 part
@@ -19,6 +19,11 @@ From maximum to minimum, pick the number that repeats the most, or. Text and use
 At the end of the project, I will test all the deta and code. Then, calculate the correct rate.
 picture_detabase is use my detabase picture to test it. which include group 1 and group2.
 
+Special notes: 
+
+
+
+
 
 Technologies and Software Used:                        
 Python; Pycharm, windows
@@ -30,4 +35,4 @@ Picture Detabase (this detabase will include 500 pictures and it's include some 
 This also in WIKI
 [Simple-gantt-chart_ms .xlsx](https://github.com/comp195/senior-project-spring-2022-AI-positioning-system/files/8189944/Simple-gantt-chart_ms.xlsx)
 
- challenges for find text & number: 
+ challenges:  (find text & number):  
