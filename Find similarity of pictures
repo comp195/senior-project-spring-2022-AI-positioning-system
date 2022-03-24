@@ -1,9 +1,9 @@
 //Use Python3 code to scan the picture. Then, compare the scanned images with images in the image database and find similar images.
 //Need todo
-//1. Image Identification  & image search code
-//2.Balance aHash
-//3. Image Binarization
-//4. Compared  Hash
+//1. Image Identification  & image search code (finish)
+//2.Balance aHash (finish)
+//3. Image Binarization (finish)
+//4. Compared  Hash (finish)
 //5. picture detabase
 
 import  numpy as np
