@@ -75,4 +75,105 @@ def newcorrectoutput(s):
     else:
       correct_output[i]=0
 
+def update_weight(i):
+  w[i][0] = w[i][0]+trainingrate*(correct_output[i]-output[i])*latitude
+  w[i][1] = w[i][1]+trainingrate*(correct_output[i]-output[i])*longitude
+
+def compareop(output, correct_output, mode, latitude, longitude): #op is output
+  if mode=="train":
+    for i in range(cnum):
+      if output[i]!=correct_output[i]:
+        update_weight(i)
+  if mode=="test":
+    for i in range(cnum):
+      if output[i]==correct_output[i]:
+        performance[i][0]+=1
+      if correct_output[i]==1 and output[i]==1:
+        performance[i][1]+=1
+      elif correct_output[i]==0 and output[i]==0:
+        performance[i][2]+=1
+      elif correct_output[i]==0 and output[i]==1:
+        performance[i][3]+=1
+      else:
+        performance[i][4]+=1
+
+def testperformance(len):
+  for i in range(cnum):
+    performance[i][0]=(performance[i][0]/len)*100
+    performance[i][1]=(performance[i][1]/len)*100
+    performance[i][2]=(performance[i][2]/len)*100
+    performance[i][3]=(performance[i][3]/len)*100
+    performance[i][4]=(performance[i][4]/len)*100
+    print("Neuron: ",namelist[i])
+    print("\tCorrect: ", performance[i][0], "%")
+    print("\tTrue Positives: ", performance[i][1], "%")
+    print("\tTrue Negatives: ", performance[i][2], "%")
+    print("\tFalse Positives: ", performance[i][3], "%")
+    print("\tFalse Negatives: ", performance[i][4], "%")
+
+mode = input("what is the mode? ")
+if mode=="train":
+#if sys.argv[1]=="train":
+ # mode=sys.argv[1]#
+  file=open("nnTrainData.txt", "r")
+  for i in range(runningtime):
+    for line in file:
+      l=line.rstrip()  
+      latitude=float(l.split()[0])
+      longitude=float(l.split()[1])
+      s=l.split()[2]
+
+      latitude,longitude=normalize(latitude,longitude) 
+      #print(latitude,longitude)
+      output=calculate(latitude,longitude)
+      #print(output)
+      newcorrectoutput(s)
+      #print(correct_output)
+      #print(mode)
+      compareop(output, correct_output, mode, latitude, longitude)
+
+  f1=open("weight.txt", "w")
+  for i in range(10):
+    for j in range(2):
+      f1.write(str(w[i][j]))
+      f1.write(" ")
+    f1.write("\n")
+  file.close()
+  f1.close()
+  print("Final weight: ", w)
+  print("Training done!")
+
+if mode=="test":
+#if sys.argv[1]=="test":
+  mode=sys.argv[1]
+  file=open("weight.txt", "r")
+  i=0
+  for line in file:
+    if line==None:
+      break
+    l=line.rstrip()
+    w[i][0]=float(l.split()[0])
+    w[i][1]=float(l.split()[1])
+    i+=1
+
+  f1=open("nnTestData.txt", "r")
+  len=0
+  for line1 in f1:
+    if line1==None:
+      break
+
+    l=line1.rstrip()
+    
+    latitude=float(l.split()[0])
+    longitude=float(l.split()[1])
+    s=l.split()[2]
+
+    latitude,longitude=normalize(latitude,longitude)
+    output=calculate(latitude,longitude)
+    newcorrectoutput(s)
+
+    compareop(output, correct_output, mode, latitude, longitude)
+    len+=1
+
+  testperformance(len)
 
