@@ -1,3 +1,7 @@
+//use lat and lon to locate the country name.
+// calculate and def the latitude and longitude
+//checkname(country)
+
 import os
 import numpy
 import sys
