@@ -68,8 +68,10 @@ def checkname(strname):
     value=7
   elif strname == "Indian":
     value=8
-  elif strname == "Pacific":
-    value=9
+ // elif strname == "Pacific":
+  //  value=9
+  elif strname == "webname":
+  valuse=9
   return value
 
 def newcorrectoutput(s):
