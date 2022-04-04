@@ -24,7 +24,7 @@ Special notes:  3/17 There is currently a problem with the text in the scanner a
 
 
 Technologies and Software Used:                        
-Python; Pycharm, windows
+Python; Pycharm, tesseract-OCR web
 
 Project Components
 ![image](https://user-images.githubusercontent.com/72994790/155926459-9816875a-93bd-442a-a118-edb4be6c404b.png)
@@ -34,4 +34,6 @@ This also in WIKI
 [Simple-gantt-chart_ms .xlsx](https://github.com/comp195/senior-project-spring-2022-AI-positioning-system/files/8189944/Simple-gantt-chart_ms.xlsx)
 
 Callenges: (find text & number):
-Still Learning about scanning the picture using Optical Character Recognition(OCR) problem. Try to use text detection, character segmentation, and Character classification to clear the text.
+The tesseract-OCR web may not very fit my requirements. So, I need to keep changing my code to make sure my  Optical Character Recognition(OCR) code can get clear text and number info from pictures. 
+
+
