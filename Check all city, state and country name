@@ -1,2 +1,21 @@
 // Use number &test that find in picture to location the place.
 //country name now is worked.
+
+from PIL import Image
+import time
+from PIL import ImageGrab
+import os
+root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def get_hash(srcimg,dstimg):
+    print("size：",dstimg.size)
+    hh = srcimg.height
+    ww = srcimg.width
+    img = dstimg.resize((hh,ww), Image.ANTIALIAS).convert('L')
+
+    print("size：",hh,ww)
+    avg = sum(list(img.getdata())) /(hh*ww)
+    s = ''.join(map(lambda i: '0' if i < avg else '1', img.getdata()))  
+    print("total points".format(len(s)))
+    t=''.join(map(lambda j: '%x' % int(s[j:j+4], 2), range(0, hh*ww, 4)))
+    return t
