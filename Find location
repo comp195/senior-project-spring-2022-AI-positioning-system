@@ -185,3 +185,15 @@ if mode=="test":
 
   testperformance(len)
 
+f1=open("weight.txt", "w")
+  for i in range(10):
+    for j in range(2):
+      f1.write(str(w[i][j]))
+      f1.write(" ")
+    f1.write("\n")
+  file.close()
+  f1.close()
+  print("Final weight: ", w)
+  print("Training done!")
+  
+  return netlocation.
