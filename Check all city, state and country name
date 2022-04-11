@@ -19,3 +19,73 @@ def get_hash(srcimg,dstimg):
     print("total points".format(len(s)))
     t=''.join(map(lambda j: '%x' % int(s[j:j+4], 2), range(0, hh*ww, 4)))
     return t
+
+def hamming(target,x1,y1,x2,y2):
+    target_path = target.split("-")[0]
+    target_name = target.split("-")[1]
+    time.sleep(1)
+    global root_dir
+    app_action_img = root_dir + '/APP_Action_Icons/' + target_path + "/" + target_name + '.png'
+    zui=False
+    try:
+        time.sleep(2)
+        img = ImageGrab.grab(bbox=(x1, y1, x2, y2))
+        time.sleep(2)
+        print("screen time：({},{})~({},{})".format(x1, y1, x2, y2))
+    
+        Screenshot_img = root_dir + '/Screen_Shots/Test_Screen_shots/similarimg.jpg'
+        img.save(Screenshot_img)
+        time.sleep(0.5)
+        im1 = Image.open(app_action_img)
+        im2 = Image.open(Screenshot_img)
+        hash1=get_hash(im1,im1)
+        hash2=get_hash(im1,im2)
+        print("ahash are{}numbers".format(len(hash1)))
+        hh = im1.height
+        ww = im1.width
+        n = hh * ww // 200
+        print("if Ahash{}nembers believe iit is 2 different pictures".format(n))
+        assert len(hash1) == len(hash2)
+        sum=0
+        for ch1, ch2 in zip(hash1, hash2):
+            if ch1!=ch2:
+                sum+=1
+        print("difference ahash has{}numbers".format(sum))
+   
+        zui= False if sum >n else True
+        indenti = (hh * ww // 4 - sum) / (hh * ww // 4)
+
+        if zui==False:
+            print("resreen shot at 2 s later...")
+            time.sleep(2)
+            time.sleep(2)
+            img = ImageGrab.grab(bbox=(x1, y1, x2, y2))
+            time.sleep(2)
+            print("screenshot：({},{})~({},{})".format(x1, y1, x2, y2))
+            
+            Screenshot_img = root_dir + '/Screen_Shots/Test_Screen_shots/similarimg_2.png'
+            time.sleep(0.5)
+/*
+            im1 = Image.open(app_action_img)
+            im2 = Image.open(Screenshot_img)
+            hash1 = get_hash(im1, im1)
+            hash2 = get_hash(im1, im2)
+            print("ahash has{}numbers".format(len(hash1)))
+            hh = im1.height
+            ww = im1.width
+            n = hh * ww // 200
+            print("if ahash believe that {} numbers difference, then it is diffent pictures".format(n))
+            assert len(hash1) == len(hash2)
+            sum = 0
+            for ch1, ch2 in zip(hash1, hash2):
+                if ch1 != ch2:
+                    sum += 1
+            print("difference ahash has{}numbers".format(sum))*/
+
+            zui = False if sum > n else True
+            indenti=(hh*ww//4-sum)/(hh*ww//4)
+    except Exception as e:
+        print("falied，please try again！", e)
+    else:
+        print("success，the samiliarity is:",indenti)
+    return zui
