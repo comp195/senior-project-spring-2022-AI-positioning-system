@@ -34,6 +34,7 @@ This also in WIKI
 [Simple-gantt-chart_ms .xlsx](https://github.com/comp195/senior-project-spring-2022-AI-positioning-system/files/8189944/Simple-gantt-chart_ms.xlsx)
 
 Callenges: (find text & number):
-The tesseract-OCR web may not very fit my requirements. So, I need to keep changing my code to make sure my  Optical Character Recognition(OCR) code can get clear text and number info from pictures. 
+The tesseract-OCR web may not very fit my requirements. This web is work now.
+
 
 
