@@ -32,6 +32,7 @@ Project Components
 Picture Detabase (this detabase will include 500 pictures and it's include some samiliar pictures. All the text and number is print number/text)
 This also in WIKI
 [Simple-gantt-chart_ms .xlsx](https://github.com/comp195/senior-project-spring-2022-AI-positioning-system/files/8189944/Simple-gantt-chart_ms.xlsx)
+Here is the picture website: https://www.pexels.com
 
 Callenges: (find text & number):
 The tesseract-OCR web may not very fit my requirements. This web is work now.
