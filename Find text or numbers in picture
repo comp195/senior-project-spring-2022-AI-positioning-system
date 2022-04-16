@@ -32,4 +32,5 @@ for i in range(0,36):
     print('page:',i)
 print('over')
 //use web to print the message
-// tesseract-ocr or baidu-ocr
+// tesseract-ocr
+//web name: https://www.liangchan.net/liangchan/11545.html
