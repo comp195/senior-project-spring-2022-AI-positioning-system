@@ -33,6 +33,7 @@ def normalize(latitude, longitude):
     return latitude,longitude
 
 namelist=["Africa", "America", "Antarctica", "Asia", "Australia", "Europe", "Artic", "Atlantic", "Indian", "Pacific"]
+namelist=["Yosi", "park", "street", "isoland", "mall"]
 output =[0]*cnum
 correct_output=[0]*cnum
 performance=[[0 for i in range(5)] for j in range(10)]
