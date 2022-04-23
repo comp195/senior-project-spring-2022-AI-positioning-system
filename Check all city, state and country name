@@ -89,4 +89,6 @@ def hamming(target,x1,y1,x2,y2):
         print("success，the samiliarity is:",indenti)
     return zui
     
+    //use image to explain and test the code
+    
     //other ahash
