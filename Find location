@@ -198,3 +198,8 @@ f1=open("weight.txt", "w")
   print("Training done!")
   
   return netlocation.
+
+//output: 35.4894	66.6641	Asia, YuHu Street
+//36.7289	68.857	Asia, ERROR
+//41.2008	20.1522	Europe, ERROR
+//41.8119	20.0589	American, Yosemite National Park
