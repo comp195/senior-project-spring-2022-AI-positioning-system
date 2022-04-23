@@ -39,4 +39,4 @@ The tesseract-OCR web may not very fit my requirements. This web is work now.
 
 Callenges: My OCR part finally worked. but still need to connect numbers and message together. 
 
-
+Change the presentation page by end of this week.
