@@ -10,18 +10,19 @@ This project can help you find the location of the photo you want. And there's a
 
 Include 4 part
 1. similarity of pictures:
-Use Python3 code to scan the picture. Then, compare the scanned images with images in the image database and find similar images.
+Use Python3 code to scan pictures that the user needs. Then, compare the scanned images with images in the image database and find similar images. This step will use the picture website: https://www.pexels.com to help search for similar pictures. It used a grayscale image, and take the average and binarize each pixel based on the average. Then, it uses Ahash to calculate the similarity number.
 2. Find text or numbers in picture: 
-Extract words and numbers from highly similar images. And. Will repeat the number. Color code.
-3. Check all city, state and country name:
+Extract words and numbers from highly similar images. Use the ORC to detect the text (print text). Then use character segmentation and recognition to locate the text and number area in the pictures. Print the repeat the same location number and names to the check location part.
+3. Find Location
 (Use training model to find the name)
 From maximum to minimum, pick the number that repeats the most, or. Text and use the item. Text to get the location.
+Use the repeat names and numbers(latitude, longitude) to locate the scan picture, which includes continents, oceans, and direct location. It used a training model to find the location name and ran multiple times to get the location. Also, the starting model uses the most repeated name and number.
 4. Test project:
 At the end of the project, I will test all the deta and code. Then, calculate the correct rate.
-picture_detabase is use my detabase picture to test it. which include group 1 and group2.
+picture_detabase is use my detabase picture to test it.
+Here is the picture web: https://www.pexels.com
 
 Special notes:  3/17 There is currently a problem with the text in the scanner and the text &number extraction. My code cannot precise, and location the white block for the text. I research about some Scan the picture use Optical Character Recognition (OCR) essay and paper to help me to solve the problem of clarity, but it does not work for now. The current progress about finding similarities is complete but not tested yet. The image database for the first group has been compiled, and there are three similar images. And the first image has print text.
-
 
 Technologies and Software Used:                        
 Python; Pycharm, tesseract-OCR web
@@ -38,5 +39,3 @@ Callenges: (find text & number):
 The tesseract-OCR web may not very fit my requirements. This web is work now.
 
 Callenges: My OCR part finally worked. but still need to connect numbers and message together. 
-
-Change the presentation page by end of this week.
