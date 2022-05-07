@@ -1,8 +1,6 @@
-//use lat and lon to locate the country name.
-// calculate and def the latitude and longitude
-//checkname(country, derection  name)
-//connect with web online
-//find location name. ()
+#use lat and lon to locate the country name.
+#calculate and def the latitude and longitude
+# The output is in output file.
 
 import os
 import numpy
@@ -32,12 +30,11 @@ def normalize(latitude, longitude):
     longitude= float((longitude-longitude_min)/longitude_range)
     return latitude,longitude
 
-namelist=["Africa", "America", "Antarctica", "Asia", "Australia", "Europe", "Artic", "Atlantic", "Indian", "Pacific"]
-namelist=["Yosi", "park", "street", "isoland", "mall"]
+namelist=["Africa", "America", "Antarctica", "Asia", "Australia", "Europe", "Artic", "Atlantic", "Indian", "Pacific", "Yosemite National Park"]
 output =[0]*cnum
 correct_output=[0]*cnum
-performance=[[0 for i in range(5)] for j in range(10)]
-w = [[0 for i in range(2)] for j in range(10)]
+performance=[[0 for i in range(5)] for j in range(11)]
+w = [[0 for i in range(2)] for j in range(11)]
 #W = [[uniform(0, 1) for i in range(2)] for j in range(10)]
 #print(normalize(33.7971,68.9375))
 
@@ -69,10 +66,10 @@ def checkname(strname):
     value=7
   elif strname == "Indian":
     value=8
- // elif strname == "Pacific":
-  //  value=9
-  elif strname == "webname":
-  valuse=9
+  elif strname == "Pacific":
+    value=9
+  elif strname == "Yosemite National Park":
+    value=10
   return value
 
 def newcorrectoutput(s):
@@ -83,6 +80,7 @@ def newcorrectoutput(s):
 
     else:
       correct_output[i]=0
+
 
 def update_weight(i):
   w[i][0] = w[i][0]+trainingrate*(correct_output[i]-output[i])*latitude
@@ -153,7 +151,7 @@ if mode=="train":
   print("Training done!")
 
 if mode=="test":
-#if sys.argv[1]=="test":
+ #if sys.argv[1]=="test":
   mode=sys.argv[1]
   file=open("weight.txt", "r")
   i=0
@@ -186,8 +184,8 @@ if mode=="test":
 
   testperformance(len)
 
-f1=open("weight.txt", "w")
-  for i in range(10):
+  f1=open("weight.txt", "w")
+  for i in range(11):
     for j in range(2):
       f1.write(str(w[i][j]))
       f1.write(" ")
@@ -197,9 +195,52 @@ f1=open("weight.txt", "w")
   print("Final weight: ", w)
   print("Training done!")
   
-  return netlocation.
+  if sys.argv[1]=="test":
+   mode=sys.argv[1]
+  file=open("final_weights.txt", "r")
+  i=0
+  for line in file:
+    if line==None:
+      break
+    l=line.rstrip()
+    w[i][0]=float(l.split()[0])
+    w[i][1]=float(l.split()[1])
+    i+=1
+  
+  #print("input weight: ", w, "\n")
 
-//output: 35.4894	66.6641	Asia, YuHu Street
-//36.7289	68.857	Asia, ERROR
-//41.2008	20.1522	Europe, ERROR
-//41.8119	20.0589	American, Yosemite National Park
+  file1=open("nnTestData.txt", "r")
+  len=0
+  for line1 in file1:
+    if line1==None:
+      break
+
+    l=line1.rstrip()
+    
+    x=float(l.split()[0])
+    y=float(l.split()[1])
+    z=l.split()[2]
+    
+
+    #print("-------------RAW DATA----------------\n",l,"\n-------------------------------------")
+
+    x,y=normalise(x,y)
+    #print("After normalising: ",x,y)
+    
+    output=calculate_output(x,y)
+    #print("Output: ", output)
+    update_correct_output(z)
+    
+
+    #print("correct_output: ", correct_output)
+
+    compare_outputs(output, correct_output, mode)
+    #print("current weights: ",w)
+    #print("\n")
+    #print(output)
+    len+=1
+
+  #print(len)
+  #print("Performance: ", performance)
+  percent_performance(len)
+ 
