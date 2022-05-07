@@ -3,9 +3,10 @@ import urllib.parse
 import random
 
 address = 'Yosemite National Park, California, 95389, United States'
-#address = random.randint(37, -119)
 url = 'https://nominatim.openstreetmap.org/search/' + urllib.parse.quote(address) +'?format=json'
 response = requests.get(url).json()
 
 print(response[0]["lat"])
 print(response[0]["lon"])
+
+#output: address = random.randint(37, -119)
