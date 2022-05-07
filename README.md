@@ -41,3 +41,4 @@ The tesseract-OCR web may not very fit my requirements. This web is work now.
 Callenges: My OCR part finally worked. but still need to connect numbers and message together. 
 
 The training and test data is used for find location part.
+Special notes: Some code cannot running the CV code in replit, need to use pycharm for that part.
