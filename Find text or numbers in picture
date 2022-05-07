@@ -1,36 +1,16 @@
-// Training model
-//OCR
-//Only for text message & number
-import cv2
-APP_ID = '1d7'
-API_KEY = 'Fvds'
-SECRET_KEY = 'LdVuc'
+#OCR
+#use web to print the message
+#tesseract-ocr
+# need to pip pillow
+# neeed yo pip pytesseract
 
-client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+import pytesseract
+from PIL import Image
 
-fname = '1 (7).png'
+im = Image.open('pw.png')
+#string = pytesseract.image_to_string(im)
+#print(string)
 
-"""read picture"""
-def get_file_content(filePath):
-    with open('1 (7).png', 'rb') as fp:
-        return fp.read()
-
-image = get_file_content(fname)
-
-results = client.general(image) 
-
-img = cv2.imread(fname)
-print(results)
-i = 0
-
-for i in range(0,36):
-    words = results['words_result'][i]['words']
-    f = open("message.txt", "a")
-    f.write(words)
-    f.close()
-    i= i+1
-    print('page:',i)
-print('over')
-//use web to print the message
-// tesseract-ocr
-//web name: https://www.liangchan.net/liangchan/11545.html
+if __name__ == '__main__':
+    text = pytesseract.image_to_string(Image.open('pw.png'),lang="eng")
+    print(text)
