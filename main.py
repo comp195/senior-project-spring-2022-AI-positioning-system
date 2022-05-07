@@ -47,16 +47,8 @@ def menu():
         menu()
 
 def upload():
-    pass
-
-def similarity():
-    pass
-
-def orcmessage():
-    pass
-
-def location():
-    pass
+  print("you can just upload your image by add file button, then type your image type in")
+  print("Or you can use url='http://name to upload our pictures")
 
 main()
  
